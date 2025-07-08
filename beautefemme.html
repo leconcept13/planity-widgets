@@ -1,64 +1,48 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
-</head>
-<body>
-<p class="p1">&lt;!-- booking-widget.html --&gt;</p>
-<p class="p1">&lt;div id="myContainerId"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1">/* ===== Planity widget customisation ===== */</p>
-<p class="p1">#planitywl { background:#ffffff; }</p>
-<p class="p1">@media (min-width:768px){ #planitywl h3 { color:#000!important; } }</p>
-<p class="p1">#planitywl .planity_bookappointment-button-choose { background:#000; }</p>
-<p class="p1">.planity_ui_appointment_background&gt;div:nth-child(2){ padding:10px; }</p>
-<p class="p1">.planity-gift-voucher-button-choose { background:#000!important; }</p>
-<p class="p1">#planitywl&gt;div:nth-child(2)&gt;div:nth-child(2)&gt;div&gt;div&gt;div&gt;div&gt;h2,</p>
-<p class="p1">#planitywl&gt;div:nth-child(2)&gt;div:nth-child(2)&gt;div&gt;div&gt;div&gt;h2,</p>
-<p class="p1">#planitywl&gt;div:nth-child(2)&gt;div:nth-child(2)&gt;div&gt;div&gt;div:nth-child(2)&gt;span { color:#000!important; }</p>
-<p class="p2"><br></p>
-<p class="p1">/* ---- Hide the banner "Prendre un RDV" ---- */</p>
-<p class="p1">.css-1u1908p{ display:none!important; }</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1">// ---------- Planity widget initialisation ----------</p>
-<p class="p1">const container = document.getElementById('myContainerId');</p>
-<p class="p1">window.planity = {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>key: '1908--LoL4aU6Phw7h4qsrMoJ',</p>
-<p class="p1"><span class="Apple-converted-space">  </span>primaryColor: '#fff',</p>
-<p class="p1"><span class="Apple-converted-space">  </span>appointmentContainer: container,</p>
-<p class="p1"><span class="Apple-converted-space">    </span>options: {servicesWhitelist: ["-OIG7YbUKdHf81wIDmzb","-NJg87MVm49ZEE1SfGRx","-NcOpDVHa6GlcXYDtKfc","-NJtn8LhVdylu2AGS_iJ","-NcOpUmkHeTzkIcIQopw","-NgACDsNdzji5BVmsewN","-OQm19NxzRVdATz4Afcs","-Nvm6Nj2c8kSdfb7vZqL","-Nvm6pLdbFtdeQGOhxFA","-Nvm79WJBVCrAsBMT1xd","-Nvm83EFS8H7_ZbRGl2e","-Nvm8zU58ErDA3tU3arr","-Nvm9_9CHJGC07c-P3fr","-NvmA7bIRlOilZGN8OcD","-NvmAaIlu_d0_xkLPm-K","-NvmB9b4DFPTHenCQNLb","-NvmBAHADKvxK8yJVtM3","-NvmBhJ2DOrmXCf5IhK4","-NvmD7HZNnZY9ErTKZfp","-NvmD_Y6lQ1ODITrhdgk","-NvmD8H9VljaEJ1ezbfT","-NvmE3JRpOoKbKNyqAmc","-NFVRSmBz1JCWw9ewxWh","-NFVQPHMwySuaBcDNH-d","-O-FuPLDJKwSRK7smmFm","-N4MD5Srzc4KJzdavHKW","-Nh82AiLLyMtit1usipG","-Nh80v6lwn_sbrSpzDmr","-Nh80vlt2AwXUoNZ4vvs","-Nh819ouBiEkQowIyhp6","-Nh81ot42U1nfZy_Kyl3","-Nh85F2pmKUd5EsXEUFd","-O1IEQk3VKrXfbBbIN4p","-NJeZu3rrV2x7pagl2S-","-NJeZNn1vDoo22qXi14t","-NJeY4Qiq6b8n6GOMzPs","-NJeYLYYX0-ialsyCIDn","-NJeZWVFam-dOFSsKQR5","-NJeYFz9S2YVpQeX7VST","-NJeXtt1h3S2VWI8nYqB","-O1IAmKpD9rXvwm-HAcQ","-O1IAiFhgCCBUT2Uq5x4","-O1IABI7TMcm3HONeW8k","-O1IASiuJRPQWoSGROsX","-O1IA_gvh6EJ1PS84lQn","-O1IA0yB0ji3_ACoeCpI","-N3kVZ0FgvlKm_oDG-Hn","-N3kVzIdSED48OhAiaf_","-N3kWEYWF_tJLKvqBirC","-N3kWMMjeU3nESquew4g","-N3kY2CPp2jha1Q5nX6V","-N3kYIM_g7kVyYmp342R","-N3kYQkpqwabt4wRH0JD","-N3kYdxbRAR06ZNCwzRT","-N3kYrIVzOhC_XSkda8e","-N3kYwvzY2MTn98IpNx9","-N3kZDehjYojG1El6eDM","-N3kZOTx4J3fnctT9hbW","-N3kZeECHJCfW42tEAfZ","-N3kZqDMZ7q7bo473rRh","-N3kZuWbFOTZUT3ANMHC","-N3kZyiY9iODccdYwVk7"],</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1">};</p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p1">// ---------- JS fallback : hide dynamically if needed ----------</p>
-<p class="p1">(function(){</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const target = 'prendre un rdv';</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const hideBanner = () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const el = [...document.querySelectorAll('h1,h2,div,span')]</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.find(e =&gt; e.textContent &amp;&amp; e.textContent.trim().toLowerCase() === target);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>if (el) { el.style.display = 'none'; return true; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>return false;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>if (hideBanner()) return; // already present</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>const obs = new MutationObserver(() =&gt; { if (hideBanner()) obs.disconnect(); });</p>
-<p class="p1"><span class="Apple-converted-space">  </span>obs.observe(document.body, { childList: true, subtree: true });</p>
-<p class="p1">})();</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p1">&lt;script src="https://d2skjte8udjqxw.cloudfront.net/widget/production/2/polyfills.latest.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;script src="https://d2skjte8udjqxw.cloudfront.net/widget/production/2/app.latest.js"&gt;&lt;/script&gt;</p>
-</body>
-</html>
+<!-- booking-widget.html -->
+<div id="myContainerId"></div>
+
+<style>
+/* ===== Planity widget customisation ===== */
+#planitywl { background:#ffffff; }
+@media (min-width:768px){ #planitywl h3 { color:#000!important; } }
+#planitywl .planity_bookappointment-button-choose { background:#000; }
+.planity_ui_appointment_background>div:nth-child(2){ padding:10px; }
+.planity-gift-voucher-button-choose { background:#000!important; }
+#planitywl>div:nth-child(2)>div:nth-child(2)>div>div>div>div>h2,
+#planitywl>div:nth-child(2)>div:nth-child(2)>div>div>div>h2,
+#planitywl>div:nth-child(2)>div:nth-child(2)>div>div>div:nth-child(2)>span { color:#000!important; }
+
+/* ---- Hide the banner "Prendre un RDV" ---- */
+.css-1u1908p{ display:none!important; }
+</style>
+
+<script>
+// ---------- Planity widget initialisation ----------
+const container = document.getElementById('myContainerId');
+window.planity = {
+  key: '1908--LoL4aU6Phw7h4qsrMoJ',
+  primaryColor: '#fff',
+  appointmentContainer: container,
+    options: {servicesWhitelist: ["-OIG7YbUKdHf81wIDmzb","-NJg87MVm49ZEE1SfGRx","-NcOpDVHa6GlcXYDtKfc","-NJtn8LhVdylu2AGS_iJ","-NcOpUmkHeTzkIcIQopw","-NgACDsNdzji5BVmsewN","-OQm19NxzRVdATz4Afcs","-Nvm6Nj2c8kSdfb7vZqL","-Nvm6pLdbFtdeQGOhxFA","-Nvm79WJBVCrAsBMT1xd","-Nvm83EFS8H7_ZbRGl2e","-Nvm8zU58ErDA3tU3arr","-Nvm9_9CHJGC07c-P3fr","-NvmA7bIRlOilZGN8OcD","-NvmAaIlu_d0_xkLPm-K","-NvmB9b4DFPTHenCQNLb","-NvmBAHADKvxK8yJVtM3","-NvmBhJ2DOrmXCf5IhK4","-NvmD7HZNnZY9ErTKZfp","-NvmD_Y6lQ1ODITrhdgk","-NvmD8H9VljaEJ1ezbfT","-NvmE3JRpOoKbKNyqAmc","-NFVRSmBz1JCWw9ewxWh","-NFVQPHMwySuaBcDNH-d","-O-FuPLDJKwSRK7smmFm","-N4MD5Srzc4KJzdavHKW","-Nh82AiLLyMtit1usipG","-Nh80v6lwn_sbrSpzDmr","-Nh80vlt2AwXUoNZ4vvs","-Nh819ouBiEkQowIyhp6","-Nh81ot42U1nfZy_Kyl3","-Nh85F2pmKUd5EsXEUFd","-O1IEQk3VKrXfbBbIN4p","-NJeZu3rrV2x7pagl2S-","-NJeZNn1vDoo22qXi14t","-NJeY4Qiq6b8n6GOMzPs","-NJeYLYYX0-ialsyCIDn","-NJeZWVFam-dOFSsKQR5","-NJeYFz9S2YVpQeX7VST","-NJeXtt1h3S2VWI8nYqB","-O1IAmKpD9rXvwm-HAcQ","-O1IAiFhgCCBUT2Uq5x4","-O1IABI7TMcm3HONeW8k","-O1IASiuJRPQWoSGROsX","-O1IA_gvh6EJ1PS84lQn","-O1IA0yB0ji3_ACoeCpI","-N3kVZ0FgvlKm_oDG-Hn","-N3kVzIdSED48OhAiaf_","-N3kWEYWF_tJLKvqBirC","-N3kWMMjeU3nESquew4g","-N3kY2CPp2jha1Q5nX6V","-N3kYIM_g7kVyYmp342R","-N3kYQkpqwabt4wRH0JD","-N3kYdxbRAR06ZNCwzRT","-N3kYrIVzOhC_XSkda8e","-N3kYwvzY2MTn98IpNx9","-N3kZDehjYojG1El6eDM","-N3kZOTx4J3fnctT9hbW","-N3kZeECHJCfW42tEAfZ","-N3kZqDMZ7q7bo473rRh","-N3kZuWbFOTZUT3ANMHC","-N3kZyiY9iODccdYwVk7"],
+    }
+};
+
+
+// ---------- JS fallback : hide dynamically if needed ----------
+(function(){
+  const target = 'prendre un rdv';
+  const hideBanner = () => {
+    const el = [...document.querySelectorAll('h1,h2,div,span')]
+      .find(e => e.textContent && e.textContent.trim().toLowerCase() === target);
+    if (el) { el.style.display = 'none'; return true; }
+    return false;
+  };
+
+  if (hideBanner()) return; // already present
+
+  const obs = new MutationObserver(() => { if (hideBanner()) obs.disconnect(); });
+  obs.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+<script src="https://d2skjte8udjqxw.cloudfront.net/widget/production/2/polyfills.latest.js"></script>
+<script src="https://d2skjte8udjqxw.cloudfront.net/widget/production/2/app.latest.js"></script>
